@@ -1,62 +1,70 @@
 package TestCasesSteps;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
 
-import java.time.Duration;
-
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import org.apache.commons.io.FileUtils;
 
 import PageObject.LandingPage;
 import PageObject.SignInPage;
 import PageObject.SignUpPage;
-import Abstract.AbstractMethods;
-import io.github.bonigarcia.wdm.WebDriverManager;
+import TestComponents.Base;
 
-public class FInalProduct{
-
-
-	@Test
-	public void GitHub() {
+public class FInalProduct extends Base{
 
 
+	@Test (dataProvider="dataProvider")
+	public void GitHub(HashMap<String,String> input) throws IOException{
 
-		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.manage().window().maximize();
-		
-
-
-	//Automate Steps Area:
-		
-		//Landing Page Check Product Footer:
-		LandingPage landingPage = new LandingPage(driver);
-		landingPage.gotoWebsite();
-		landingPage.getProductFooterText(); 
-		
-		
 		//Sign-Up page area:
-		SignUpPage signuppage = landingPage.clickSignUp(); 
-		signuppage.processSignUp("Scott","Pass123456");
+		SignUpPage signuppage = landingpage.clickSignUp(); 
+		signuppage.processSignUp(input.get("email"), input.get("password"));
 		Assert.assertEquals(signuppage.email_ErrorMessage(),"Email is invalid or already taken"); //Verify Error Message:
 		
 		//Sign-In Page:
 		SignInPage signInPage = signuppage.clickSignIn();
-		signInPage.processLogInCredential("Scott","Pass123456");
+		signInPage.processLogInCredential(input.get("email"), input.get("password"));
 		Assert.assertEquals(signInPage.verifyIncorrectCredential(),"Incorrect username or password."); //Verify Error Message:
 		
-//		driver.quit();
-	
 	}
+	
+	
+	@DataProvider
+	public Object[][] dataProvider() throws IOException {
+//		List<HashMap<String,String>> data = List<HashMap<String, String>> jsonHashMap(System.getProperty("user.dir")+"\\src\\test\\java\\dataProvider\\dataProvider.json");
+		List<HashMap<String,String>> data = jsonHashMap(System.getProperty("user.dir")+"\\src\\test\\java\\dataProvider\\dataProvider.json");
+		return new Object [] [] { {data.get(0)},{data.get(1)} };
+	}
+	
 }
+
+
+
+//WebDriverManager.chromedriver().setup();
+//WebDriver driver = new ChromeDriver();
+//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//driver.manage().window().maximize();
+
+
+
+//Automate Steps Area:
+
+////Landing Page Check Product Footer:
+//LandingPage landingpage = new LandingPage(driver);
+//landingpage.gotoWebsite();
+//landingpage.getProductFooterText(); 
+
+
+
+//Landing Page Check Product Footer:
+//launchApplication();
+//landingpage.gotoWebsite();
+
+//Landing Page Check Product Footer:
 
 
 

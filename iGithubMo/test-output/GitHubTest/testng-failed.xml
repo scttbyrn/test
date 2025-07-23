@@ -5,7 +5,9 @@
     <classes>
       <class name="TestCasesSteps.FInalProduct">
         <methods>
-          <include name="openWeb"/>
+          <include name="launchApplication"/>
+          <include name="GitHub"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- TestCasesSteps.FInalProduct -->
     </classes>

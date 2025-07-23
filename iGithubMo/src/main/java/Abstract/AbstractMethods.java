@@ -6,13 +6,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import com.fasterxml.jackson.databind.deser.Deserializers.Base;
+
 import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
 
 
 
 //In this class where we can put all reusable methods for every page object class (ex. WebDriverWait()) , Generic Utilities:
 
-public class AbstractMethods { //Constructor:
+public class AbstractMethods{ //Constructor:
 
 	WebDriver driver;
 
@@ -24,7 +26,7 @@ public class AbstractMethods { //Constructor:
 
 	public void inputURL(String url) {
 
-		driver.get(url);
+		 driver.get(url);
 	}
 
 
