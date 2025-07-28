@@ -11,6 +11,8 @@ import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -48,6 +50,17 @@ public class Base { //In this class where can put all of the global steps can be
 			driver = new ChromeDriver();
 
 		}
+		
+		else if (browserName.equalsIgnoreCase("edge")) {
+
+			WebDriverManager.edgedriver().setup();
+			driver = new EdgeDriver();
+
+		}
+		
+
+		
+		
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.manage().window().maximize();
@@ -87,6 +100,18 @@ public class Base { //In this class where can put all of the global steps can be
 		return data;
 
 
+	}
+	
+	
+	public String getScreenshot(String testCaseName,WebDriver driver) throws IOException
+	{
+		TakesScreenshot ts = (TakesScreenshot)driver;
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		File file = new File(System.getProperty("user.dir") + "//reports//" + testCaseName + ".png");
+		FileUtils.copyFile(source, file);
+		return System.getProperty("user.dir") + "//reports//" + testCaseName + ".png";
+		
+		
 	}
 
 

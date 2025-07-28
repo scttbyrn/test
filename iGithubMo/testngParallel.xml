@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite parallel="tests" name="Suite">
-  <test  name="LandingPage">
-    <classes>
-      <class name="TestCasesSteps.TC01_LandingPage"/>
-    </classes>
-    </test>
-     <test  name="FInalProduct">
-    <classes>
-      <class name="TestCasesSteps.FInalProduct"/>
-    </classes>
-    
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+	<listeners>
+		<listener class-name="TestComponents.Listeners"></listener>
+	</listeners>
+
+	<test name="LandingPage">
+		<classes>
+			<class name="TestCasesSteps.TC01_LandingPage" />
+		</classes>
+	</test>
+
+	<test name="FInalProduct">
+		<classes>
+			<class name="TestCasesSteps.FInalProduct" />
+		</classes>
+
+	</test> <!--
+	Test -->
+</suite> <!--
+Suite -->

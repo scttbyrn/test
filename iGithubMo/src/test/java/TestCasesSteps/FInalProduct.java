@@ -13,11 +13,12 @@ import PageObject.LandingPage;
 import PageObject.SignInPage;
 import PageObject.SignUpPage;
 import TestComponents.Base;
+import TestComponents.Retry;
 
 public class FInalProduct extends Base{
 
 
-	@Test (dataProvider="dataProvider")
+	@Test (dataProvider="dataProvider", retryAnalyzer = Retry.class)
 	public void GitHub(HashMap<String,String> input) throws IOException{
 
 		//Sign-Up page area:
@@ -28,7 +29,7 @@ public class FInalProduct extends Base{
 		//Sign-In Page:
 		SignInPage signInPage = signuppage.clickSignIn();
 		signInPage.processLogInCredential(input.get("email"), input.get("password"));
-		Assert.assertEquals(signInPage.verifyIncorrectCredential(),"Incorrect username or password."); //Verify Error Message:
+		Assert.assertEquals(signInPage.verifyIncorrectCredential(),"Incorrect username  password."); //Verify Error Message:
 		
 	}
 	
