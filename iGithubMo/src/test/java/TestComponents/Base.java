@@ -43,6 +43,7 @@ public class Base { //In this class where can put all of the global steps can be
 		prop.load(fis);
 
 		String browserName = prop.getProperty("browser");
+//		String browserName = System.getProperty("browser")!=null ? System.getProperty("browser") :prop.getProperty("browser");
 
 		if (browserName.equalsIgnoreCase("chrome")) {
 
@@ -52,9 +53,11 @@ public class Base { //In this class where can put all of the global steps can be
 		}
 		
 		else if (browserName.equalsIgnoreCase("edge")) {
-
-			WebDriverManager.edgedriver().setup();
+			System.setProperty("webdriver.edge.driver", "C:\\Users\\sbEscueta\\Downloads\\edgedriver_win64\\msedgedriver.exe");
+//			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
+			
+			
 
 		}
 		

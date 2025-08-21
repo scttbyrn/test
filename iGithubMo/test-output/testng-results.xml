@@ -1,33 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results retried="2" ignored="0" total="5" passed="1" failed="2" skipped="0">
+<testng-results retried="2" ignored="0" total="4" passed="0" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-28T17:43:44 SGT" name="Suite" finished-at="2025-07-28T17:44:23 SGT" duration-ms="38536">
+  <suite started-at="2025-08-12T18:59:38 SGT" name="GitHubTest" finished-at="2025-08-12T19:00:13 SGT" duration-ms="34968">
     <groups>
     </groups>
-    <test started-at="2025-07-28T17:43:44 SGT" name="LandingPage" finished-at="2025-07-28T17:43:55 SGT" duration-ms="10263">
-      <class name="TestCasesSteps.TC01_LandingPage">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:TestCasesSteps.TC01_LandingPage@7749bf93]" started-at="2025-07-28T17:43:45 SGT" name="launchApplication" finished-at="2025-07-28T17:43:51 SGT" duration-ms="6628" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="verifyFooterText()[pri:0, instance:TestCasesSteps.TC01_LandingPage@7749bf93]" started-at="2025-07-28T17:43:51 SGT" name="verifyFooterText" finished-at="2025-07-28T17:43:52 SGT" duration-ms="1031" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyFooterText -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCasesSteps.TC01_LandingPage@7749bf93]" started-at="2025-07-28T17:43:52 SGT" name="tearDown" finished-at="2025-07-28T17:43:55 SGT" duration-ms="2523" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- TestCasesSteps.TC01_LandingPage -->
-    </test> <!-- LandingPage -->
-    <test started-at="2025-07-28T17:43:44 SGT" name="FInalProduct" finished-at="2025-07-28T17:44:23 SGT" duration-ms="38536">
+    <test started-at="2025-08-12T18:59:38 SGT" name="GitHub Landing Page" finished-at="2025-08-12T19:00:13 SGT" duration-ms="34968">
       <class name="TestCasesSteps.FInalProduct">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:TestCasesSteps.FInalProduct@1a6c1270]" started-at="2025-07-28T17:43:45 SGT" name="launchApplication" finished-at="2025-07-28T17:43:50 SGT" duration-ms="5402" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:TestCasesSteps.FInalProduct@2cf3d63b]" started-at="2025-08-12T18:59:39 SGT" name="launchApplication" finished-at="2025-08-12T18:59:42 SGT" duration-ms="3499" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method retried="true" signature="GitHub(java.util.HashMap)[pri:0, instance:TestCasesSteps.FInalProduct@1a6c1270]" started-at="2025-07-28T17:43:50 SGT" name="GitHub" data-provider="dataProvider" finished-at="2025-07-28T17:43:57 SGT" duration-ms="6915" status="SKIP">
+        <test-method retried="true" signature="GitHub(java.util.HashMap)[pri:0, instance:TestCasesSteps.FInalProduct@2cf3d63b]" started-at="2025-08-12T18:59:42 SGT" name="GitHub" data-provider="dataProvider" finished-at="2025-08-12T18:59:47 SGT" duration-ms="5006" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -64,27 +48,33 @@ at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
 at org.testng.TestRunner.privateRun(TestRunner.java:741)
 at org.testng.TestRunner.run(TestRunner.java:616)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-at java.base/java.lang.Thread.run(Thread.java:834)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GitHub -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCasesSteps.FInalProduct@1a6c1270]" started-at="2025-07-28T17:43:57 SGT" name="tearDown" finished-at="2025-07-28T17:43:58 SGT" duration-ms="689" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCasesSteps.FInalProduct@2cf3d63b]" started-at="2025-08-12T18:59:47 SGT" name="tearDown" finished-at="2025-08-12T18:59:48 SGT" duration-ms="399" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:TestCasesSteps.FInalProduct@1a6c1270]" started-at="2025-07-28T17:43:58 SGT" name="launchApplication" finished-at="2025-07-28T17:44:02 SGT" duration-ms="4091" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:TestCasesSteps.FInalProduct@2cf3d63b]" started-at="2025-08-12T18:59:48 SGT" name="launchApplication" finished-at="2025-08-12T18:59:51 SGT" duration-ms="3140" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="GitHub(java.util.HashMap)[pri:0, instance:TestCasesSteps.FInalProduct@1a6c1270]" started-at="2025-07-28T17:44:02 SGT" name="GitHub" data-provider="dataProvider" finished-at="2025-07-28T17:44:06 SGT" duration-ms="4451" status="FAIL">
+        <test-method signature="GitHub(java.util.HashMap)[pri:0, instance:TestCasesSteps.FInalProduct@2cf3d63b]" started-at="2025-08-12T18:59:51 SGT" name="GitHub" data-provider="dataProvider" finished-at="2025-08-12T18:59:55 SGT" duration-ms="4003" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -121,27 +111,33 @@ at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
 at org.testng.TestRunner.privateRun(TestRunner.java:741)
 at org.testng.TestRunner.run(TestRunner.java:616)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-at java.base/java.lang.Thread.run(Thread.java:834)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GitHub -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCasesSteps.FInalProduct@1a6c1270]" started-at="2025-07-28T17:44:07 SGT" name="tearDown" finished-at="2025-07-28T17:44:07 SGT" duration-ms="362" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCasesSteps.FInalProduct@2cf3d63b]" started-at="2025-08-12T18:59:55 SGT" name="tearDown" finished-at="2025-08-12T18:59:55 SGT" duration-ms="304" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:TestCasesSteps.FInalProduct@1a6c1270]" started-at="2025-07-28T17:44:07 SGT" name="launchApplication" finished-at="2025-07-28T17:44:11 SGT" duration-ms="3790" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:TestCasesSteps.FInalProduct@2cf3d63b]" started-at="2025-08-12T18:59:55 SGT" name="launchApplication" finished-at="2025-08-12T18:59:59 SGT" duration-ms="3887" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method retried="true" signature="GitHub(java.util.HashMap)[pri:0, instance:TestCasesSteps.FInalProduct@1a6c1270]" started-at="2025-07-28T17:44:11 SGT" name="GitHub" data-provider="dataProvider" finished-at="2025-07-28T17:44:15 SGT" duration-ms="3772" status="SKIP">
+        <test-method retried="true" signature="GitHub(java.util.HashMap)[pri:0, instance:TestCasesSteps.FInalProduct@2cf3d63b]" started-at="2025-08-12T18:59:59 SGT" name="GitHub" data-provider="dataProvider" finished-at="2025-08-12T19:00:04 SGT" duration-ms="5052" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -178,27 +174,33 @@ at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
 at org.testng.TestRunner.privateRun(TestRunner.java:741)
 at org.testng.TestRunner.run(TestRunner.java:616)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-at java.base/java.lang.Thread.run(Thread.java:834)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GitHub -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCasesSteps.FInalProduct@1a6c1270]" started-at="2025-07-28T17:44:15 SGT" name="tearDown" finished-at="2025-07-28T17:44:15 SGT" duration-ms="352" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCasesSteps.FInalProduct@2cf3d63b]" started-at="2025-08-12T19:00:04 SGT" name="tearDown" finished-at="2025-08-12T19:00:04 SGT" duration-ms="328" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:TestCasesSteps.FInalProduct@1a6c1270]" started-at="2025-07-28T17:44:15 SGT" name="launchApplication" finished-at="2025-07-28T17:44:19 SGT" duration-ms="3707" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:TestCasesSteps.FInalProduct@2cf3d63b]" started-at="2025-08-12T19:00:04 SGT" name="launchApplication" finished-at="2025-08-12T19:00:08 SGT" duration-ms="3944" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="GitHub(java.util.HashMap)[pri:0, instance:TestCasesSteps.FInalProduct@1a6c1270]" started-at="2025-07-28T17:44:19 SGT" name="GitHub" data-provider="dataProvider" finished-at="2025-07-28T17:44:23 SGT" duration-ms="3899" status="FAIL">
+        <test-method signature="GitHub(java.util.HashMap)[pri:0, instance:TestCasesSteps.FInalProduct@2cf3d63b]" started-at="2025-08-12T19:00:08 SGT" name="GitHub" data-provider="dataProvider" finished-at="2025-08-12T19:00:13 SGT" duration-ms="4726" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -235,23 +237,29 @@ at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
 at org.testng.TestRunner.privateRun(TestRunner.java:741)
 at org.testng.TestRunner.run(TestRunner.java:616)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-at java.base/java.lang.Thread.run(Thread.java:834)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GitHub -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCasesSteps.FInalProduct@1a6c1270]" started-at="2025-07-28T17:44:23 SGT" name="tearDown" finished-at="2025-07-28T17:44:23 SGT" duration-ms="340" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCasesSteps.FInalProduct@2cf3d63b]" started-at="2025-08-12T19:00:13 SGT" name="tearDown" finished-at="2025-08-12T19:00:13 SGT" duration-ms="353" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- TestCasesSteps.FInalProduct -->
-    </test> <!-- FInalProduct -->
-  </suite> <!-- Suite -->
+    </test> <!-- GitHub Landing Page -->
+  </suite> <!-- GitHubTest -->
 </testng-results>

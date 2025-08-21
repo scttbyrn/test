@@ -14,11 +14,11 @@ import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
 
 //In this class where we can put all reusable methods for every page object class (ex. WebDriverWait()) , Generic Utilities:
 
-public class AbstractMethods{ //Constructor:
+public class AbstractMethods{ 
 
 	WebDriver driver;
 
-	public AbstractMethods(WebDriver driver) {
+	public AbstractMethods(WebDriver driver) { //Constructor:
 
 		this.driver = driver;
 	}

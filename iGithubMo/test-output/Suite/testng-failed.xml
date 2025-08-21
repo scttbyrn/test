@@ -9,10 +9,21 @@
       <class name="TestCasesSteps.FInalProduct">
         <methods>
           <include name="launchApplication"/>
-          <include name="GitHub" invocation-numbers="0 1"/>
+          <include name="GitHub"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- TestCasesSteps.FInalProduct -->
     </classes>
   </test> <!-- FInalProduct(failed) -->
+  <test thread-count="5" parallel="tests" name="LandingPage(failed)">
+    <classes>
+      <class name="TestCasesSteps.TC01_LandingPage">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="verifyFooterText"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- TestCasesSteps.TC01_LandingPage -->
+    </classes>
+  </test> <!-- LandingPage(failed) -->
 </suite> <!-- Failed suite [Suite] -->
